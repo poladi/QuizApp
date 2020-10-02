@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="datastyles.css">
+  <link rel="stylesheet" type="text/css" href="play.css">
+</head>
+
+<body ng-app="myModule" style="background-color:#F7FDF8">
+<nav style="background-color: #41C5A1;" class="navbar navbar-custom">
+<div class="container-fluid">
+</nav> 
+<center>
+  <img src="profile.png" style="width: 150px; height: 130px;">
+ <!--  -->
+<h2 style="text-align: center;">
+<script>
+            function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                    }
+                }
+                return params;
+            }
+          params = getParams();
+            firstname = unescape(params["firstname"]);
+           
+            document.write("Good Luck " + firstname + " ");
+        </script>
+    </h2>
+    <hr>
+<!-- Questions -->
+    <div class="container">
+      <div id="game" class="justify-center flex-column">
+        <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <p class="hud-prefix"> <b>Score</b> 
+            </p>
+            <h1 class="hud-main-text" id="score" style="color: #D64A54">
+              0
+            </h1>
+          </div>
+        </div>
+        <h2 id="question">What is the answer to this questions?</h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text" data-number="1">Choice 1</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text" data-number="2">Choice 2</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text" data-number="3">Choice 3</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text" data-number="4">Choice 4</p>
+        </div>
+      </div>
+    </div>
+    <script src="game.js"></script>
+<!--  -->
+  <center>
+     <button onclick="goBack()">Go Home</button>
+  </center>
+    
+  </div>
+  <br>
+<!-- Return -->
+<script>
+function goBack() {
+  window.history.back(-1);
+}
+</script>
+    </center>
+
+ <div class="jumbotron text-center" style="margin-bottom:0; color: white; background-color: #41C5A1;">
+  <h4 style="color: rgb(124, 130, 128);"></h4>
+</div>
+<script type="text/javascript" src="game.js"></script>
+    </body>
+</html>

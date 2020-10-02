@@ -1,0 +1,48 @@
+h2 {color:#41C5A1 
+}
+
+hr {width: 30%
+}
+
+img {
+  width: 450px;
+  height: 355px;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #41C5A1;
+  color: white;
+}
+
+button{
+  display: block;
+  width: 10%;
+  height: 35px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: .5s;
+}
+button:hover{
+  background-position: right;}
+
+  td:hover  {background-color: #41C5A1;}
